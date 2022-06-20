@@ -14,8 +14,8 @@ const cartReducer = (state, action) => {
             totalAmount: updatedTA,
         }
     }
-    else if (action.type === "ADD") {
-        
+    else if (action.type === "RM") {
+
     }
     return defaultCartState
 }

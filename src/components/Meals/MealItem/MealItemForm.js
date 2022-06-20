@@ -17,11 +17,11 @@ const MealItemForm = (props) => {
         props.onAddToCart(int_entAmt);
     }
     return (
-        <form className={classes.form}>
+        <form className={classes.form} onSubmit={submitHandler}>
             <Input ref={amtInputRef}
             label="Amount"
             input={{id: 'amount', type:'number', min:'1', max:'5', step:'1', defaultValue:'1'}} />
-            <button onClick={submitHandler}>+ Add</button>
+            <button>+ Add</button>
             {!amtIsValid && <p>Please enter (1-5).</p>}
         </form>
     )
