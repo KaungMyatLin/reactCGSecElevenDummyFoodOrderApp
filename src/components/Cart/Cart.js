@@ -17,13 +17,13 @@ const Cart = (props) => {
         cartctx.addItem({...i, amount:1});
     }
     const cartItems = (<ul className={classes['cart-items']}>{
-        cartctx.map(i => {
+        cartctx.items.map(i => (
             <CartItem key={i.id} name={i.name} 
             amount={i.amount} price={i.price} 
             onRemove={cartItemRmHandler.bind(null, i.id)}
             onAdd = {cartItemAddHandler.bind(null, i)}
             />
-    })
+    ))
     }</ul>)
 
     return (
