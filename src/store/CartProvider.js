@@ -57,7 +57,6 @@ const CartProvider = (props) => {
     }
     const removeItemHandler = (id) => {
         dispatCartAction({type: "RM", id: id})
-
     }
     const cartContext = {
         items: cartStatess.items,
